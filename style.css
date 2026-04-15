@@ -1,0 +1,204 @@
+:root {
+    --back-accent: #222;
+    background-color: #222;
+}
+
+body {
+    margin: 0px;
+    color: aliceblue;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.inter,
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 72pt;
+    margin: 0px;
+}
+
+.inter-h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.cover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(var(--parallax-x), var(--parallax-y)) scale(1.2);
+    width: 100%;
+    height: 100%;
+    background: url(../images/alexander-bagno-z3AZoQAIkao-unsplash.jpg) no-repeat center center;
+    background-size: cover;
+    filter: brightness(50%);
+    z-index: -2;
+}
+
+.cover {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    --parallax-x: 0px;
+    --parallax-y: 0px;
+}
+
+.frak-h1 {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 72pt;
+}
+
+.carousel {
+    transition: background-color 0.35s ease;
+}
+
+.carousel-info>div {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    position: absolute;
+}
+
+.carousel-info>div.active {
+    opacity: 1;
+}
+
+.carousel {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+}
+
+.carousel-sidebar {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content;
+    padding: 0px;
+    gap: 0px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+.carousel-sidebar div {
+    display: flex;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.carousel-sidebar h1 {
+    margin: 0;
+    font-size: clamp(1rem, 3vw, 3rem);
+}
+
+.cover-thingy {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content;
+    padding: 0px;
+    gap: 0px;
+}
+
+.im-going-to-extradite-a-child {
+    display: flex;
+    align-items: center;
+    direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.the-child-in-question {
+    display: flex;
+    align-self: center;
+    text-align: center;
+}
+
+.HELP-ME {
+    position: absolute;
+    float: right;
+    margin-right: 50px;
+    clear: both;
+}
+
+.stupidity {
+    padding: 1em 1em 1em 1em;
+}
+
+h2 {
+    font-size: 36pt;
+}
+
+div.carousel-sidebar>div>h2 {
+    margin: 1em 0 0 1em;
+}
+
+.navbar {
+    background-color: #222222b7;
+    position: sticky;
+    top: 0;
+    z-index: 32;
+    transition: top 0.35s ease;
+    backdrop-filter: blur(10px);
+}
+
+
+/*
+.navbar>ul>li .navbar>ul>li>a {
+    margin: 0;
+    float: left;
+}
+
+.navbar>ul>li>a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar>ul {
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #111111;
+}
