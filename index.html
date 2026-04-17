@@ -13,13 +13,13 @@
         title = "Flight Seargent Joe Tye reviews COSMIC TRAVEL's 'Visit Germany' - honest, brutal. . . . . . . . ";
         position = 0;
 
-        function scrolltitle() {
+        function scrollthingy() {
             document.title = title.substring(position, title.length) + title.substring(0, position);
             position++;
             if (position > title.length) position = 0;
-            titleScroll = window.setTimeout(scrolltitle, 170);
+            titleScroll = window.setTimeout(scrollthingy, 170);
         }
-        scrolltitle();
+        scrollthingy();
     </script>
     <style>
 
@@ -28,9 +28,9 @@
 
 <body>
     <div class="navbar">
+        <div class="logo"></div>
         <ul class="skyrim">
             <li><a href="#">home</a></li>
-            <li><a href="#">blog</a></li>
             <li><a href="#">blog</a></li>
         </ul>
     </div>

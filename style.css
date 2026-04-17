@@ -156,6 +156,22 @@ div.carousel-sidebar>div>h2 {
     z-index: 32;
     transition: top 0.35s ease;
     backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 44px;
+    width: 120px;
+    margin: 14px 16px;
+    background: inherit;
+    display: flex;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: left center;
+    background: white;
+    mask-image: url(images/cosmic-travel.png);
+    mask-mode: luminance;
 }
 
 
@@ -181,7 +197,7 @@ div.carousel-sidebar>div>h2 {
 */
 
 ul {
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -200,5 +216,5 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #111111;
+    background-color: #222222;
 }
