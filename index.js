@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener("mouseenter", () => {
 
             const color = getComputedStyle(item).backgroundColor;
-            carousel.style.backgroundColor = dim_color(color, 0.95);
+            carousel.style.backgroundColor = dim_color(color, 1);
 
             const i = item.dataset.i;
 

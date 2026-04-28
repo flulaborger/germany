@@ -26,7 +26,7 @@ h1 {
 }
 
 .inter-h1 {
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
@@ -40,7 +40,7 @@ h1 {
     transform: translate(var(--parallax-x), var(--parallax-y)) scale(1.2);
     width: 100%;
     height: 100%;
-    background: url(../images/alexander-bagno-z3AZoQAIkao-unsplash.jpg) no-repeat center center;
+    background: url(./images/alexander-bagno-z3AZoQAIkao-unsplash.jpg) no-repeat center center;
     background-size: cover;
     filter: brightness(80%);
     z-index: -2;
@@ -64,7 +64,7 @@ h1 {
 }
 
 .carousel {
-    transition: background-color 0.35s ease;
+    transition: background-color 0.1s ease;
 }
 
 .carousel-info>div {
