@@ -87,10 +87,9 @@ h1 {
     flex-grow: 1;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: max-content;
     padding: 0px;
     gap: 0px;
-    flex-grow: 1;
+    flex-grow: 1.4;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
@@ -104,7 +103,6 @@ h1 {
 
 .carousel-sidebar h1 {
     margin: 0;
-    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 .cover-thingy {
@@ -141,12 +139,9 @@ h1 {
     padding: 1em 1em 1em 1em;
 }
 
-h2 {
-    font-size: 36pt;
-}
-
 div.carousel-sidebar>div>h2 {
-    margin: 1em 0 0 1em;
+    font-size: 48pt;
+    line-height: 28pt;
 }
 
 .navbar {
