@@ -63,6 +63,37 @@ h1 {
     font-size: 72pt;
 }
 
+@keyframes wavething {
+    0% {
+        transform: translateY(-16px);
+    }
+    50% {
+        transform: translateY(16px);
+    }
+    100% {
+        transform: translateY(-16px);
+    }
+}
+
+.guide-thing {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 20%;
+    animation: 3.5s ease-in-out 0s infinite wavething;
+}
+
+.guide-thing>h4>span {
+    background-color: var(--back-accent);
+    padding: 1em;
+    border-radius: 50%;
+}
+
+.noselect {
+    user-select: none;
+    -moz-user-select: none;
+}
+
 .carousel {
     transition: background-color 0.1s ease;
 }
@@ -141,7 +172,7 @@ h1 {
 
 div.carousel-sidebar>div>h2 {
     font-size: 48pt;
-    line-height: 28pt;
+    line-height: 36pt;
 }
 
 .navbar {
