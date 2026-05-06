@@ -1,5 +1,6 @@
 :root {
     --back-accent: #222;
+    --back-accent-blurme: #222222b7;
     background-color: #222;
 }
 
@@ -63,6 +64,12 @@ h1 {
     font-size: 72pt;
 }
 
+::selection {
+  background: #FF0099;
+  text-shadow: none;
+  z-index: calc(inherit - 2);
+}
+
 @keyframes wavething {
     0% {
         transform: translateY(-16px);
@@ -84,7 +91,8 @@ h1 {
 }
 
 .guide-thing>h4>span {
-    background-color: var(--back-accent);
+    background-color: var(--back-accent-blurme);
+    backdrop-filter: blur(10px);
     padding: 1em;
     border-radius: 50%;
 }
@@ -95,7 +103,7 @@ h1 {
 }
 
 .carousel {
-    transition: background-color 0.1s ease;
+    transition: background-color 0.27s ease;
 }
 
 .carousel-info>div {
@@ -120,7 +128,7 @@ h1 {
     grid-template-columns: auto;
     padding: 0px;
     gap: 0px;
-    flex-grow: 1.4;
+    flex-grow: 1;
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
@@ -130,10 +138,20 @@ h1 {
     display: flex;
     justify-content: left;
     overflow: hidden;
+    align-items: end;
 }
 
 .carousel-sidebar h1 {
     margin: 0;
+}
+
+div.carousel-sidebar>div>h2 {
+    font-size: 72pt;
+    line-height: 56pt;
+
+    vertical-align: text-bottom;
+    transform: translateY(1em);
+    margin-left: 0.2em;
 }
 
 .cover-thingy {
@@ -151,6 +169,8 @@ h1 {
     direction: column;
     text-align: center;
     justify-content: space-around;
+    padding-left: 16px;
+    padding-right: 16px
 }
 
 .the-child-in-question {
@@ -170,18 +190,13 @@ h1 {
     padding: 1em 1em 1em 1em;
 }
 
-div.carousel-sidebar>div>h2 {
-    font-size: 48pt;
-    line-height: 36pt;
-}
-
 .navbar {
-    background-color: #222222b7;
+    background-color: var(--back-accent-blurme);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 32;
     transition: top 0.35s ease;
-    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
 }
@@ -242,7 +257,7 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #222222b7;
+    background-color: var(--back-accent-blurme);
     transition: background-color 0.35s ease;
     backdrop-filter: blur(10px);
     border-radius: 25px;
