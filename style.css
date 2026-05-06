@@ -65,9 +65,9 @@ h1 {
 }
 
 ::selection {
-  background: #FF0099;
-  text-shadow: none;
-  z-index: calc(inherit - 2);
+    background: #FF0099;
+    text-shadow: none;
+    z-index: calc(inherit - 2);
 }
 
 @keyframes wavething {
@@ -148,7 +148,6 @@ h1 {
 div.carousel-sidebar>div>h2 {
     font-size: 72pt;
     line-height: 56pt;
-
     vertical-align: text-bottom;
     transform: translateY(1em);
     margin-left: 0.2em;
@@ -177,6 +176,9 @@ div.carousel-sidebar>div>h2 {
     display: flex;
     align-self: center;
     text-align: center;
+    background-color: var(--back-accent-blurme);
+    backdrop-filter: blur(10px);
+    padding: 0 1em
 }
 
 .HELP-ME {
