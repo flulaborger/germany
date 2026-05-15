@@ -50,27 +50,30 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!show_nav && y) {
             show_nav = true;
             nav.style.top = `0px`;
-            console.log("wijwfjinwf");
+            // console.log("wijwfjinwf");
         } else if (show_nav && !y) {
             show_nav = false;
             nav.style.top = `-100px`;
-            console.log("oeooeoeoe");
+            // console.log("oeooeoeoe");
         }
     }
 
     function wowie(e) {
-        /*
-        igor.style.setProperty("--cover-bg-x", `${e.clientX / 64}`);   // most buns ass shit ever bunshart
-        */
 
-        const igor = document.querySelector(".cover");
+    const igor = document.querySelector(".cover");
 
-        const x = (e.clientX / window.innerWidth - 0.5) * 30;
-        const y = (e.clientY / window.innerHeight - 0.5) * 30;
+    const x = (e.clientX / window.innerWidth - 0.5) * 30;
+    const y = (e.clientY / window.innerHeight - 0.5) * 30;
 
-        igor.style.setProperty('--parallax-x', `${x}px`);
-        igor.style.setProperty('--parallax-y', `${y}px`);
-    }
+    const cx = parseFloat(getComputedStyle(igor).getPropertyValue('--parallax-x')) || 0;
+    const cy = parseFloat(getComputedStyle(igor).getPropertyValue('--parallax-y')) || 0;
+
+    const sx = cx + (x - cx) * 0.1;
+    const sy = cy + (y - cy) * 0.1; // can i do smth like ease-in? yes, do i care? no
+
+    igor.style.setProperty('--parallax-x', `${sx}px`);
+    igor.style.setProperty('--parallax-y', `${sy}px`);
+}
 
     document.addEventListener("mousemove", (e) => {
         pain(e, (e.clientY < window.innerHeight / 5))
